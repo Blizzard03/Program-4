@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller.CalculatorController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Options" visible="false">
+              <items>
+                  <CheckMenuItem fx:id="feModeCheckItem" mnemonicParsing="false" onAction="#changeFeMode" text="FE Mode" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Theme" visible="false">
+            <items>
+                  <CheckMenuItem fx:id="LightThemeCheckItem" mnemonicParsing="false" onAction="#ChangeTheme" selected="true" text="Light Mode" />
+                  <CheckMenuItem fx:id="DarkThemeCheckItem" mnemonicParsing="false" onAction="#ChangeTheme" text="Dark Mode" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#About_Click" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="Result" alignment="BASELINE_RIGHT" editable="false" layoutX="25.0" layoutY="36.0" prefHeight="107.0" prefWidth="566.0" styleClass="Display" text="0">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </TextField>
+      <GridPane hgap="3.0" layoutX="183.0" layoutY="159.0" prefHeight="251.0" prefWidth="250.0" vgap="3.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#oneDividedByClick" prefHeight="60.0" prefWidth="60.0" text="1/x" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#rootbutton_click" prefHeight="60.0" prefWidth="60.0" text="2√x" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#powerClick" prefHeight="60.0" prefWidth="60.0" text="x²" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#multliply_button" prefHeight="60.0" prefWidth="60.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#btn_7_click" prefHeight="60.0" prefWidth="60.0" text="7" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#button_8_click" prefHeight="60.0" prefWidth="60.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#button_9_click" prefHeight="60.0" prefWidth="60.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#minus_click" prefHeight="60.0" prefWidth="60.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#btn_6_click" prefHeight="60.0" prefWidth="60.0" text="6" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#btn_5_click" prefHeight="60.0" prefWidth="60.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#button4_click" prefHeight="60.0" prefWidth="60.0" text="4" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#plusbutton_click" prefHeight="60.0" prefWidth="60.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#button3_click" prefHeight="60.0" prefWidth="60.0" text="3" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#button2_click" prefHeight="60.0" prefWidth="60.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#btn1clik" prefHeight="60.0" prefWidth="60.0" text="1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#negateClick" prefHeight="60.0" prefWidth="60.0" text="+/-" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button minWidth="124.0" mnemonicParsing="false" onAction="#button0_click" prefHeight="60.0" prefWidth="124.0" text="0" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#decimal_point_click" prefHeight="60.0" prefWidth="60.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#equals_button_click" prefHeight="60.0" prefWidth="60.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#Percent_Click" prefHeight="60.0" prefWidth="60.0" text="\%" />
+            <Button mnemonicParsing="false" onAction="#Clear_btn_click" prefHeight="60.0" prefWidth="60.0" text="AC" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#Backspace_click" prefHeight="60.0" prefWidth="60.0" text="⬅" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#devide_button_click" prefHeight="60.0" prefWidth="60.0" text="÷" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <Text fx:id="savedNumbers" layoutX="33.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>
