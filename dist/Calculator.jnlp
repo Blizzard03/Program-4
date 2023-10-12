@@ -8,8 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Calculator.jar" size="8701" download="eager" />
-    <jar href="lib\exp4j-0.4.8.jar" size="46943" download="eager" />
+    <jar href="Calculator.jar" size="8715" download="eager" />
+    <jar href="lib\exp4j-0.4.8.jar" size="46942" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="calculator.Main_Class.Calculator"  name="Calculator" />
   <update check="always"/>
